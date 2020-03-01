@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Git Repo App.xcodeproj">
+      location = "self:Repo List.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,14 +1,14 @@
 //
-//  Git_Repo_AppUITests.swift
-//  Git Repo AppUITests
+//  Repo_ListUITests.swift
+//  Repo ListUITests
 //
-//  Created by Max Kuzmovych on 29.02.2020.
+//  Created by Max Kuzmovych on 01.03.2020.
 //  Copyright © 2020 Max Kuzmovych. All rights reserved.
 //
 
 import XCTest
 
-class Git_Repo_AppUITests: XCTestCase {
+class Repo_ListUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

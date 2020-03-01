@@ -1,15 +1,15 @@
 //
-//  Git_Repo_AppTests.swift
-//  Git Repo AppTests
+//  Repo_ListTests.swift
+//  Repo ListTests
 //
-//  Created by Max Kuzmovych on 29.02.2020.
+//  Created by Max Kuzmovych on 01.03.2020.
 //  Copyright © 2020 Max Kuzmovych. All rights reserved.
 //
 
 import XCTest
-@testable import Git_Repo_App
+@testable import Repo_List
 
-class Git_Repo_AppTests: XCTestCase {
+class Repo_ListTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
