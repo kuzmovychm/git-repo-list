@@ -10,25 +10,22 @@ import XCTest
 @testable import Repo_List
 
 class Repo_ListTests: XCTestCase {
-
+    
+    var service: GitHubRepositoryService?
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        service = GitHubRepositoryService()
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
+    func testGitHubRepositoryServiceInit() {
+        XCTAssertEqual(service?.gitHubRepositories, [GitHubRepository]())
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testFetchRepository() {
+        var repositories: [GitHubRepository]
+        service?.fetchRepositories()
+        repositories = (service?.gitHubRepositories ?? nil)!
+        XCTAssertNotNil(repositories)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
 }

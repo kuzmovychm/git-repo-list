@@ -19,7 +19,7 @@ struct ContentView: View {
                 if repositoryService.isLoading {
                     Loader(isAnimating: repositoryService.isLoading)
                 } else {
-                    List(repositoryService.repositories) { repo in
+                    List(repositoryService.gitHubRepositories) { repo in
                         GitHubRepositoryView(name: repo.name, description: repo.description)
                     }
                 }
@@ -53,7 +53,7 @@ struct Loader: UIViewRepresentable {
     var isAnimating: Bool
     
     func makeUIView(context: UIViewRepresentableContext<Loader>) -> UIActivityIndicatorView {
-        return UIActivityIndicatorView(style: .medium)
+        return UIActivityIndicatorView(style: .large)
     }
 
     func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<Loader>) {

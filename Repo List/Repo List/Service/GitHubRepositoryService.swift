@@ -12,7 +12,8 @@ class GitHubRepositoryService: ObservableObject {
     let REPOSITORIES_URL = "https://api.github.com/orgs/square/repos"
     
     @Published var isLoading = Bool(true)
-    @Published var repositories = [GitHubRepository]()
+    @Published var gitHubRepositories = [GitHubRepository]()
+
     
     func fetchRepositories() {
         if let url = URL(string: REPOSITORIES_URL) {
@@ -24,7 +25,7 @@ class GitHubRepositoryService: ObservableObject {
                             let results = try JSONDecoder().decode([GitHubRepository].self, from: safeData)
                             DispatchQueue.main.async {
                                 self.isLoading = false
-                                self.repositories = results
+                                self.gitHubRepositories = results
                             }
                         } catch {
                             print(error)

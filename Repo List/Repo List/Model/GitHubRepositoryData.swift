@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GitHubRepository: Codable, Identifiable {
+struct GitHubRepository: Codable, Identifiable, Equatable {
     let id: Int
     let name: String?
     let description: String?
