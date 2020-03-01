@@ -23,12 +23,13 @@ struct ContentView: View {
                         GitHubRepositoryView(name: repo.name, description: repo.description)
                     }
                 }
-            }
+                }
             .navigationBarTitle("GitHub Repositories")
         }
         .onAppear {
             self.repositoryService.fetchRepositories()
         }
+        
     }
 }
 
