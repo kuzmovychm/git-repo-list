@@ -14,8 +14,14 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(repositoryService.repositories) { repo in
-                GitHubRepositoryView(name: repo.name, description: repo.description)
+            Group {
+                if repositoryService.isLoading {
+                    Text("Loading...")
+                } else {
+                    List(repositoryService.repositories) { repo in
+                        GitHubRepositoryView(name: repo.name, description: repo.description)
+                    }
+                }
             }
             .navigationBarTitle("GitHub Repositories")
         }
