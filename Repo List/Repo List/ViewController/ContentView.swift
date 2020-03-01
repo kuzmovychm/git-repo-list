@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     
@@ -16,7 +17,7 @@ struct ContentView: View {
         NavigationView {
             Group {
                 if repositoryService.isLoading {
-                    Text("Loading...")
+                    Loader(isAnimating: repositoryService.isLoading)
                 } else {
                     List(repositoryService.repositories) { repo in
                         GitHubRepositoryView(name: repo.name, description: repo.description)
@@ -47,11 +48,18 @@ struct GitHubRepositoryView: View {
     }
 }
 
-let repos = [
-    GitHubRepository(id: 1, name: "Name 1", description: "Description 1"),
-    GitHubRepository(id: 2, name: "Name 2", description: "Description 2"),
-    GitHubRepository(id: 3, name: "Name 3", description: "Description 3")
-]
+struct Loader: UIViewRepresentable {
+    
+    var isAnimating: Bool
+    
+    func makeUIView(context: UIViewRepresentableContext<Loader>) -> UIActivityIndicatorView {
+        return UIActivityIndicatorView(style: .medium)
+    }
+
+    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<Loader>) {
+        isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

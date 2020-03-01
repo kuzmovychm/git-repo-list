@@ -107,11 +107,11 @@
 		500B8C6E240BE2F700968452 /* Repo List */ = {
 			isa = PBXGroup;
 			children = (
-				500B8CA4240BF79500968452 /* Model */,
-				500B8C9F240BF5EF00968452 /* Service */,
 				500B8C6F240BE2F700968452 /* AppDelegate.swift */,
 				500B8C71240BE2F700968452 /* SceneDelegate.swift */,
+				500B8CA4240BF79500968452 /* Model */,
 				500B8CA9240BFC1E00968452 /* ViewController */,
+				500B8C9F240BF5EF00968452 /* Service */,
 				500B8C75240BE2FA00968452 /* Assets.xcassets */,
 				500B8C7A240BE2FA00968452 /* LaunchScreen.storyboard */,
 				500B8C7D240BE2FA00968452 /* Info.plist */,
