@@ -11,7 +11,7 @@ import UIKit
 
 struct ContentView: View {
     
-    @ObservedObject var repositoryService = GitHubRepositoryService()
+    @ObservedObject var repositoryService: GitHubRepositoryService
     
     var body: some View {
         NavigationView {
@@ -63,6 +63,6 @@ struct Loader: UIViewRepresentable {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(repositoryService: GitHubRepositoryService())
     }
 }
