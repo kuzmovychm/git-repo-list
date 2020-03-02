@@ -49,19 +49,6 @@ struct GitHubRepositoryView: View {
     }
 }
 
-struct Loader: UIViewRepresentable {
-    
-    var isAnimating: Bool
-    
-    func makeUIView(context: UIViewRepresentableContext<Loader>) -> UIActivityIndicatorView {
-        return UIActivityIndicatorView(style: .large)
-    }
-
-    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<Loader>) {
-        isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(repositoryService: GitHubRepositoryService())

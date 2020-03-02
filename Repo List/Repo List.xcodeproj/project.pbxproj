@@ -21,6 +21,7 @@
 		500B8CA6240BF7D200968452 /* GitHubRepositoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B8CA5240BF7D200968452 /* GitHubRepositoryData.swift */; };
 		500B8CA7240BF7D200968452 /* GitHubRepositoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B8CA5240BF7D200968452 /* GitHubRepositoryData.swift */; };
 		500B8CA8240BF7D200968452 /* GitHubRepositoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B8CA5240BF7D200968452 /* GitHubRepositoryData.swift */; };
+		5091CBC1240D245400ED06D8 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091CBC0240D245400ED06D8 /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		500B8C93240BE2FA00968452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500B8CA0240BF61500968452 /* GitHubRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryService.swift; sourceTree = "<group>"; };
 		500B8CA5240BF7D200968452 /* GitHubRepositoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryData.swift; sourceTree = "<group>"; };
+		5091CBC0240D245400ED06D8 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				500B8C73240BE2F700968452 /* ContentView.swift */,
+				5091CBC0240D245400ED06D8 /* Loader.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			files = (
 				500B8CA1240BF61500968452 /* GitHubRepositoryService.swift in Sources */,
 				500B8C70240BE2F700968452 /* AppDelegate.swift in Sources */,
+				5091CBC1240D245400ED06D8 /* Loader.swift in Sources */,
 				500B8CA6240BF7D200968452 /* GitHubRepositoryData.swift in Sources */,
 				500B8C72240BE2F700968452 /* SceneDelegate.swift in Sources */,
 				500B8C74240BE2F700968452 /* ContentView.swift in Sources */,

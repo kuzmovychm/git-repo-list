@@ -13,7 +13,8 @@ class GitHubRepositoryService: ObservableObject {
     
     @Published var isLoading = Bool(true)
     @Published var gitHubRepositories = [GitHubRepository]()
-
+    
+    var delegate: GitHubRepositoryService?
     
     func fetchRepositories() {
         if let url = URL(string: REPOSITORIES_URL) {
